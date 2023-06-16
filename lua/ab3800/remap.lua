@@ -4,6 +4,8 @@ vim.keymap.set("n", "<leader>tt", ":vnew term://bash<CR>")
 vim.keymap.set("n", "<leader>tn", ":tabn<CR>")
 vim.keymap.set("n", "<leader>tp", ":tabp<CR>")
 
+vim.keymap.set("n", "<leader>nt", ":NERDTree<CR><C-w>r")
+
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-Esc>", "<Esc>")
 
