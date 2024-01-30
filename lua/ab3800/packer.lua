@@ -6,18 +6,27 @@ return require('packer').startup(function(use)
 
   use 'preservim/nerdtree'
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
+ -- use({
+--	  'rose-pine/neovim',
+--	  as = 'rose-pine',
+--	  config = function()
+--		  vim.cmd('colorscheme rose-pine')
+--	  end
+--  })
+
+    use({ 
+        "ablakely/vaporlush", 
+        requires={ "rktjmp/lush.nvim" },
+        config = function()
+            vim.cmd('colorscheme vaporlush')
+        end
+    })
+
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('itchyny/lightline.vim')
@@ -26,7 +35,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('nikvdp/ejs-syntax')
   use('ap/vim-css-color')
-  use('xiyaowong/transparent.nvim')
+--  use('xiyaowong/transparent.nvim')
 
   use {
       'VonHeikemen/lsp-zero.nvim',
